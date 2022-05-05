@@ -55,7 +55,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
     int ultimaPosicion = pq->size - 1;
-        
+    printf("Size: %d\n",ultimaPosicion);
 
 }
 
