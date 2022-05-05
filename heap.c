@@ -63,28 +63,29 @@ void heap_pop(Heap* pq){
 
     
     int posicion = 0;
-
-    while (1){
-        int posicionHijo = (2 * posicion) + 1;
-        int posicionHijoDos = (2 * posicion) + 2;
-      
-        if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority || pq->heapArray[posicion].priority < pq->heapArray[posicionHijoDos].priority){
-
-                if (pq->heapArray[posicionHijo].priority < pq->heapArray[posicionHijoDos].priority){
-                    aux = pq->heapArray[posicion];
-                    pq->heapArray[posicion] = pq->heapArray[posicionHijoDos];
-                    pq->heapArray[posicionHijoDos] = aux;
-                    posicion = posicionHijoDos;
+    if (pq != NULL){
+        while (1){
+            int posicionHijo = (2 * posicion) + 1;
+            int posicionHijoDos = (2 * posicion) + 2;
+          
+            if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority || pq->heapArray[posicion].priority < pq->heapArray[posicionHijoDos].priority){
+    
+                    if (pq->heapArray[posicionHijo].priority < pq->heapArray[posicionHijoDos].priority){
+                        aux = pq->heapArray[posicion];
+                        pq->heapArray[posicion] = pq->heapArray[posicionHijoDos];
+                        pq->heapArray[posicionHijoDos] = aux;
+                        posicion = posicionHijoDos;
+                }
+                else{
+                        aux = pq->heapArray[posicion];
+                        pq->heapArray[posicion] = pq->heapArray[posicionHijo];
+                        pq->heapArray[posicionHijo] = aux;
+                        posicion = posicionHijo;
+                }
+                    
             }
-            else{
-                    aux = pq->heapArray[posicion];
-                    pq->heapArray[posicion] = pq->heapArray[posicionHijo];
-                    pq->heapArray[posicionHijo] = aux;
-                    posicion = posicionHijo;
-            }
-                
+            break;
         }
-        break;
     }
 }
 
