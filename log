@@ -1,0 +1,11 @@
+Thu May  5 15:06:21 UTC 2022: 
+ heap.c | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+In file included from test.c:4:0:
+test.c: In function ‘createHeap’:
+heap.c:37:20: error: ‘nuevoHeap’ is used uninitialized in this function [-Werror=uninitialized]
+   nuevoHeap->capac = 0;
+   ~~~~~~~~~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+805b6d5
