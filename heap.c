@@ -26,10 +26,12 @@ void* heap_top(Heap* pq){
 
 void heap_push(Heap* pq, void* data, int priority){
     int posicion = pq->size;
+    //SE INGRESA DATO AL ARREGLO
     pq->heapArray[posicion].data = data;
     pq->heapArray[posicion].priority = priority;
     pq->size++;
     heapElem aux;
+
 
     while (1){
         //PADRE : (x-1)/2
@@ -46,7 +48,10 @@ void heap_push(Heap* pq, void* data, int priority){
         }
         else{break;}
     }
-    
+    if (pq->capac == pq->size){
+        printf("ENTRA\n");
+        pq->heapArray = (heapElem*)realloc(pq->heapArray,(pq->capac * 2) + 1);
+    }
 }
 
 
