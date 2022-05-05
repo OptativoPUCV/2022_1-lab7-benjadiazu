@@ -59,7 +59,6 @@ void heap_pop(Heap* pq){
     if (pq != NULL){
         //INTERCAMBIO
         pq->heapArray[0] = pq->heapArray[ultimaPosicion];
-        pq->heapArray[ultimaPosicion].priority = 0;
         //SE ELIMINA EL ULTIMO
         pq->size--;
         
