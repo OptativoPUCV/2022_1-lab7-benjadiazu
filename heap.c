@@ -54,11 +54,24 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
+    //BORRADO
     int ultimaPosicion = pq->size - 1;
     heapElem aux = pq->heapArray[0];
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->heapArray[ultimaPosicion] = aux;
     pq->size--;
+
+    
+    int posicion = 0;
+
+  
+    int posicionHijo = (2 * posicion) + 1;
+    if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority){
+        //Swap
+        aux = pq->heapArray[posicion];
+        pq->heapArray[posicion] = pq->heapArray[posicionHijo];
+        pq->heapArray[posicionHijo] = aux;
+    }
 }
 
 Heap* createHeap(){
