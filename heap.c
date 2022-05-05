@@ -45,7 +45,7 @@ void heap_push(Heap* pq, void* data, int priority){
         }
         else{break;}
     }
-
+    //AUMENTAR ARREGLO
     if (pq->capac == pq->size){
         pq->capac = pq->capac * 2 + 1;
         pq->heapArray = (heapElem*)realloc(pq->heapArray,sizeof(heapElem) * pq->capac);
@@ -54,44 +54,43 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-    //INTERCAMBIAR ULTIMO CON EL PRIMERO
-    int posicionUltimo = pq->size - 1;
-    if (pq->size != 0){
-        pq->heapArray[0] = pq->heapArray[posicionUltimo];
-        pq->size--;
 
-        //HACER SWAPS
-        //Hijos 2x+1 o 2x+2
-        int posicionHijoUno = 1;
+    int ultimaPosicion = pq->size - 1;
+    if (pq != NULL){
+        //INTERCAMBIO
+        pq->heapArray[0] = pq->heapArray[ultimaPosicion];
+        //SE ELIMINA EL ULTIMO
+        pq->size--;
+        int nuevaPosicion = 0;
+        int posicionHijo = 1;
         int posicionHijoDos = 2;
-        int posicionInicio = 0;
         heapElem aux;
         while (1){
-            if (pq->heapArray[posicionHijoUno].priority > pq->heapArray[posicionInicio].priority){
-                aux = pq->heapArray[posicionInicio];
-                pq->heapArray[posicionInicio] = pq->heapArray[posicionHijoUno];
-                pq->heapArray[posicionHijoUno] = aux;
-                posicionInicio = posicionHijoUno;
-              
+            if (pq->heapArray[nuevaPosicion].priority < pq->heapArray[posicionHijo].priority){
+                //SWAP
+                aux = pq->heapArray[nuevaPosicion];
+                pq->heapArray[nuevaPosicion] = pq->heapArray[posicionHijo];
+                pq->heapArray[posicionHijo] = aux;
+                nuevaPosicion = posicionHijo;
             }
-            else{
-                if (pq->heapArray[posicionHijoDos].priority > pq->heapArray[posicionInicio].priority){
-                    aux = pq->heapArray[posicionInicio];
-                    pq->heapArray[posicionInicio] = pq->heapArray[posicionHijoDos];
-                    pq->heapArray[posicionHijoDos] = aux;
-                    posicionInicio = posicionHijoDos;
+            else {
+                  if (pq->heapArray[nuevaPosicion].priority < pq->heapArray[posicionHijoDos].priority){
+                  aux = pq->heapArray[nuevaPosicion];
+                  pq->heapArray[nuevaPosicion] = pq->heapArray[posicionHijoDos];
+                  pq->heapArray[posicionHijoDos] = aux;
+                  nuevaPosicion = posicionHijoDos;
                 }
-                break;
+              break;
             }
         }
     }
 }
 
 Heap* createHeap(){
-  Heap *nuevoHeap;
-  nuevoHeap = (Heap*)malloc(sizeof(Heap));
-  nuevoHeap->size = 0;
-  nuevoHeap->heapArray = (heapElem*)malloc(3 * sizeof(heapElem));
-  nuevoHeap->capac = 3;
-  return nuevoHeap;
+    Heap *nuevoHeap;
+    nuevoHeap = (Heap*)malloc(sizeof(Heap));
+    nuevoHeap->size = 0;
+    nuevoHeap->heapArray = (heapElem*)malloc(3 * sizeof(heapElem));
+    nuevoHeap->capac = 3;
+    return nuevoHeap;
 }

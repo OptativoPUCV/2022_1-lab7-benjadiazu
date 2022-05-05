@@ -358,3 +358,9 @@ Thu May  5 16:14:54 UTC 2022:
  tests:  7|1
 total_score: 45/70
 97b105b
+Thu May  5 22:09:45 UTC 2022: 
+ heap.c | 39 +++++++++++++++++++--------------------
+ 1 file changed, 19 insertions(+), 20 deletions(-)
+ tests:  7|1
+total_score: 45/70
+d46dd2b
