@@ -77,3 +77,9 @@ heap.c:21:48: error: ‘NULl’ undeclared (first use in this function); did you
 heap.c:21:48: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 7f0b595
+Thu May  5 15:09:59 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  1|3
+total_score: 10/70
+ff666cd
