@@ -54,12 +54,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-    int ultimaPosicion = pq->size;
-    if (pq != NULL){
-        //INTERCAMBIO
-        pq->heapArray[0] = pq->heapArray[ultimaPosicion];
-        //SE ELIMINA EL ULTIMO
-        pq->size--;
+    int ultimaPosicion = pq->size - 1;
         
 
 }
