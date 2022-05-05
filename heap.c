@@ -42,6 +42,7 @@ void heap_push(Heap* pq, void* data, int priority){
             pq->heapArray[posicionPadre].priority = pq->heapArray[posicion].priority;
             pq->heapArray[posicionPadre].data = pq->heapArray[posicion].data;
             pq->heapArray[posicion] = aux;
+            posicion = posicionPadre;
         }
         else{break;}
     }
