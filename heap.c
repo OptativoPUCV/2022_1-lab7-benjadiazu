@@ -46,7 +46,7 @@ void heap_push(Heap* pq, void* data, int priority){
         }
         else{break;}
     }
-    if (pq->capac <= pq->size){
+    if (pq->capac == pq->size){
         printf("ENTRA\n");
         pq->heapArray = (heapElem*)realloc(pq->heapArray,(pq->capac * 2) + 1);
     }
@@ -61,7 +61,7 @@ Heap* createHeap(){
   Heap *nuevoHeap;
   nuevoHeap = (Heap*)malloc(sizeof(Heap));
   nuevoHeap->size = 0;
-  nuevoHeap->heapArray = (heapElem*)malloc(3 * sizeof(heapElem));
-  nuevoHeap->capac = 3;
+  nuevoHeap->heapArray = (heapElem*)malloc(sizeof(heapElem));
+  nuevoHeap->capac = 0;
   return nuevoHeap;
 }
