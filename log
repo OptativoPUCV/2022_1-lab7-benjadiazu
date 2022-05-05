@@ -94,3 +94,15 @@ heap.c:22:25: error: cast from pointer to integer of different size [-Werror=poi
 cc1: all warnings being treated as errors
 Compilation failed
 176e950
+Thu May  5 15:10:44 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_top’:
+heap.c:22:20: error: format ‘%d’ expects argument of type ‘int’, but argument 2 has type ‘int *’ [-Werror=format=]
+     printf("data: %d\n",(int*)pq->heapArray[0].data);
+                   ~^    ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+                   %ls
+cc1: all warnings being treated as errors
+Compilation failed
+8721d69

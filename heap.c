@@ -19,7 +19,7 @@ typedef struct Heap{
 
 void* heap_top(Heap* pq){
 
-    printf("data: %d\n",(int)pq->heapArray[0].data);
+    printf("data: %d\n",(int*)pq->heapArray[0].data);
     if (pq->heapArray[0].data == NULL || pq == NULL)return NULL;
     return pq->heapArray[0].data;
 }
