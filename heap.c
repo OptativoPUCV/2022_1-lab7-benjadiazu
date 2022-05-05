@@ -61,10 +61,7 @@ void heap_pop(Heap* pq){
         pq->heapArray[0] = pq->heapArray[ultimaPosicion];
         //SE ELIMINA EL ULTIMO
         pq->size--;
-        int nuevaPosicion = 0;
-        int posicionHijo = 1;
-        int posicionHijoDos = 2;
-        heapElem aux;
+        
 
 }
 
