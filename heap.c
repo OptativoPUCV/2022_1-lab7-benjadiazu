@@ -65,25 +65,7 @@ void heap_pop(Heap* pq){
         int posicionHijo = 1;
         int posicionHijoDos = 2;
         heapElem aux;
-        while (1){
-            if (pq->heapArray[nuevaPosicion].priority < pq->heapArray[posicionHijo].priority){
-                //SWAP
-                aux = pq->heapArray[nuevaPosicion];
-                pq->heapArray[nuevaPosicion] = pq->heapArray[posicionHijo];
-                pq->heapArray[posicionHijo] = aux;
-                nuevaPosicion = posicionHijo;
-            }
-            else {
-                  if (pq->heapArray[nuevaPosicion].priority < pq->heapArray[posicionHijoDos].priority){
-                  aux = pq->heapArray[nuevaPosicion];
-                  pq->heapArray[nuevaPosicion] = pq->heapArray[posicionHijoDos];
-                  pq->heapArray[posicionHijoDos] = aux;
-                  nuevaPosicion = posicionHijoDos;
-                }
-              break;
-            }
-        }
-    }
+
 }
 
 Heap* createHeap(){
