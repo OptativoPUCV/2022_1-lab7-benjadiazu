@@ -30,8 +30,9 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->heapArray[posicion].priority = priority;
     pq->size++;
     heapElem aux;
-    pq->heapArray = (heapElem*)realloc(pq->heapArray,(pq->capac * 2) + 1);
+    
     if (pq->capac == pq->size){
+        printf("ENTRA\n");
         pq->heapArray = (heapElem*)realloc(pq->heapArray,(pq->capac * 2) + 1);
     }
 
