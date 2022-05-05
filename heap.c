@@ -25,7 +25,26 @@ void* heap_top(Heap* pq){
 
 
 void heap_push(Heap* pq, void* data, int priority){
+    int posicion = pq->size;
+    pq->heapArray[posicion].data = data;
+    pq->heapArray[posicion].priority = priority;
 
+    heapElem aux;
+
+    while (1){
+        //PADRE : (x-1)/2
+        //HIJO: 2x+1 2x+2
+        //COMPARAR CON PADRE
+        int posicionPadre = (posicion - 1)/2;
+        if (pq->heapArray[posicion].priority > pq->heapArray[posicionPadre].priority){
+            //SWAP
+            aux = pq->heapArray[posicionPadre];
+            pq->heapArray[posicionPadre].priority = pq->heapArray[posicion].priority;
+            pq->heapArray[posicionPadre].data = pq->heapArray[posicion].data;
+            pq->heapArray[posicion] = aux;
+        }
+        else{break;}
+    }
 }
 
 
@@ -39,5 +58,5 @@ Heap* createHeap(){
   nuevoHeap->size = 0;
   nuevoHeap->heapArray = (heapElem*)malloc(3 * sizeof(heapElem));
   nuevoHeap->capac = 3;
-   return nuevoHeap;
+  return nuevoHeap;
 }
