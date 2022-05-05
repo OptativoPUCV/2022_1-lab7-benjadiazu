@@ -257,3 +257,9 @@ heap.c:49:20: error: expected expression before ‘<’ token
                     ^
 Compilation failed
 34cad6a
+Thu May  5 15:41:19 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  5|2
+total_score: 35/70
+9b073d2
