@@ -50,7 +50,8 @@ void heap_push(Heap* pq, void* data, int priority){
 
     if (pq->capac == pq->size){
         printf("ENTRA\n");
-        pq->heapArray = (heapElem*)realloc(pq->heapArray,sizeof (pq->capac * 2 + 1));
+        pq->heapArray = (heapElem*)realloc(pq->heapArray,sizeof(pq->capac * 2 + 1));
+        pq->capac = pq->capac * 2 + 1;
     }
 }
 
