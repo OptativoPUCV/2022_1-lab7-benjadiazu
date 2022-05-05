@@ -75,12 +75,14 @@ void heap_pop(Heap* pq){
         }
     }
     else{
+        /*
         if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority){
             //SWAP
             aux = pq->heapArray[posicion];
             pq->heapArray[posicion] = pq->heapArray[hijoUno];
             pq->heapArray[hijoUno] = aux;
         }
+        */
     }
   
 }
