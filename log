@@ -83,3 +83,14 @@ Thu May  5 15:09:59 UTC 2022:
  tests:  1|3
 total_score: 10/70
 ff666cd
+Thu May  5 15:10:36 UTC 2022: 
+ heap.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_top’:
+heap.c:22:25: error: cast from pointer to integer of different size [-Werror=pointer-to-int-cast]
+     printf("data: %d\n",(int)pq->heapArray[0].data);
+                         ^
+cc1: all warnings being treated as errors
+Compilation failed
+176e950
