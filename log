@@ -147,3 +147,13 @@ Thu May  5 15:29:45 UTC 2022:
  tests:  4|2
 total_score: 30/70
 d3418c4
+Thu May  5 15:30:37 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_push’:
+heap.c:47:9: error: ‘else’ without a previous ‘if’
+         else{break;}
+         ^~~~
+Compilation failed
+607b8bc
