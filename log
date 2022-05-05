@@ -29,3 +29,9 @@ heap.c:37:19: error: ‘nuevoHeap’ is used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 244e4ba
+Thu May  5 15:07:26 UTC 2022: 
+ heap.c | 1 +
+ 1 file changed, 1 insertion(+)
+ tests:  1|3
+total_score: 10/70
+5948f06
