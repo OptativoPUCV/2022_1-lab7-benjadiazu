@@ -67,7 +67,7 @@ void heap_pop(Heap* pq){
         while (1){
             int posicionHijo = (2 * posicion) + 1;
             int posicionHijoDos = (2 * posicion) + 2;
-          
+            printf("POSICION : %d\n",posicion);
             if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority || pq->heapArray[posicion].priority < pq->heapArray[posicionHijoDos].priority){
     
                     if (pq->heapArray[posicionHijo].priority < pq->heapArray[posicionHijoDos].priority){
@@ -84,7 +84,6 @@ void heap_pop(Heap* pq){
                 }
                     
             }
-            printf("POSICION : %d\n",posicion);
             break;
         }
     }
