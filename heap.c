@@ -32,7 +32,6 @@ void heap_push(Heap* pq, void* data, int priority){
     pq->size++;
     heapElem aux;
 
-
     while (1){
         //PADRE : (x-1)/2
         int posicionPadre = (posicion - 1)/2;
@@ -57,10 +56,34 @@ void heap_push(Heap* pq, void* data, int priority){
 void heap_pop(Heap* pq){
     //INTERCAMBIAR ULTIMO CON EL PRIMERO
     int posicionUltimo = pq->size - 1;
-    
-
     if (pq->size != 0){
         pq->heapArray[0] = pq->heapArray[posicionUltimo];
+        pq->size--;
+
+        //HACER SWAPS
+        //Hijos 2x+1 o 2x+2
+        int posicionHijoUno = 1;
+        int posicionHijoDos = 2;
+        int posicionInicio = 0;
+        heapElem aux;
+        while (1){
+            if (pq->heapArray[posicionHijoUno].priority > pq->heapArray[posicionInicio].priority){
+                aux = pq->heapArray[posicionInicio];
+                pq->heapArray[posicionInicio] = pq->heapArray[posicionHijoUno];
+                pq->heapArray[posicionHijoUno] = aux;
+                posicionInicio = posicionHijoUno;
+              
+            }
+            else{
+                if (pq->heapArray[posicionHijoDos].priority > pq->heapArray[posicionInicio].priority){
+                    aux = pq->heapArray[posicionInicio];
+                    pq->heapArray[posicionInicio] = pq->heapArray[posicionHijoDos];
+                    pq->heapArray[posicionHijoDos] = aux;
+                    posicionInicio = posicionHijoDos;
+                }
+                break;
+            }
+        }
     }
 }
 
