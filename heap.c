@@ -40,8 +40,7 @@ void heap_push(Heap* pq, void* data, int priority){
         if (pq->heapArray[posicion].priority > pq->heapArray[posicionPadre].priority){
             //SWAP
             aux = pq->heapArray[posicionPadre];
-            pq->heapArray[posicionPadre].priority = pq->heapArray[posicion].priority;
-            pq->heapArray[posicionPadre].data = pq->heapArray[posicion].data;
+            pq->heapArray[posicionPadre] = pq->heapArray[posicion];
             pq->heapArray[posicion] = aux;
             posicion = posicionPadre;
         }
@@ -57,8 +56,12 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
     //INTERCAMBIAR ULTIMO CON EL PRIMERO
-    //int posicionUltimo = pq->size - 1;
+    int posicionUltimo = pq->size - 1;
     
+
+    if (pq->size != 0){
+        pq->heapArray[0] = pq->heapArray[posicionUltimo];
+    }
 }
 
 Heap* createHeap(){
