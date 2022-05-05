@@ -9,3 +9,14 @@ heap.c:37:20: error: ‘nuevoHeap’ is used uninitialized in this function [-We
 cc1: all warnings being treated as errors
 Compilation failed
 805b6d5
+Thu May  5 15:06:53 UTC 2022: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+In file included from test.c:4:0:
+test.c: In function ‘createHeap’:
+heap.c:37:19: error: ‘nuevoHeap’ is used uninitialized in this function [-Werror=uninitialized]
+   nuevoHeap->size = 0;
+   ~~~~~~~~~~~~~~~~^~~
+cc1: all warnings being treated as errors
+Compilation failed
+e4b947e
