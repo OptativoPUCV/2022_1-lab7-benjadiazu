@@ -84,7 +84,7 @@ void heap_pop(Heap* pq){
                 }
                     
             }
-            printf("POSICION : %d\n\n",posicion);
+            printf("POSICION : %d\n",posicion);
             break;
         }
     }
