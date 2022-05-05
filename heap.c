@@ -55,7 +55,9 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
     int ultimaPosicion = pq->size - 1;
+    heapElem aux = pq->heapArray[0];
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
+    pq->heapArray[ultimaPosicion] = aux;
 }
 
 Heap* createHeap(){
