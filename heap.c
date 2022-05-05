@@ -35,9 +35,8 @@ void heap_push(Heap* pq, void* data, int priority){
 
     while (1){
         //PADRE : (x-1)/2
-        //HIJO: 2x+1 2x+2
-        //COMPARAR CON PADRE
         int posicionPadre = (posicion - 1)/2;
+        //COMPARAR CON PADRE
         if (pq->heapArray[posicion].priority > pq->heapArray[posicionPadre].priority){
             //SWAP
             aux = pq->heapArray[posicionPadre];
@@ -48,6 +47,8 @@ void heap_push(Heap* pq, void* data, int priority){
         }
         else{break;}
     }
+    printf("capac : %d",pq->capac);
+    printf("size : %d",pq->size);
     if (pq->capac == pq->size){
         printf("ENTRA\n");
         pq->heapArray = (heapElem*)realloc(pq->heapArray,(pq->capac * 2) + 1);
