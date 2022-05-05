@@ -334,3 +334,9 @@ heap.c:61:9: error: unused variable ‘posicionUltimo’ [-Werror=unused-variabl
 cc1: all warnings being treated as errors
 Compilation failed
 89ae9fe
+Thu May  5 15:56:07 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 45/70
+7d70b21

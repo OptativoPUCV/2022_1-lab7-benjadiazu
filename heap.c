@@ -58,7 +58,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
     //INTERCAMBIAR ULTIMO CON EL PRIMERO
-    int posicionUltimo = pq->size - 1;
+    //int posicionUltimo = pq->size - 1;
     
 }
 
