@@ -58,6 +58,7 @@ void heap_pop(Heap* pq){
     heapElem aux = pq->heapArray[0];
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->heapArray[ultimaPosicion] = aux;
+    pq->size--;
 }
 
 Heap* createHeap(){
