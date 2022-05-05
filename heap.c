@@ -64,13 +64,27 @@ void heap_pop(Heap* pq){
     
     int posicion = 0;
 
-  
-    int posicionHijo = (2 * posicion) + 1;
-    if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority){
-        //Swap
-        aux = pq->heapArray[posicion];
-        pq->heapArray[posicion] = pq->heapArray[posicionHijo];
-        pq->heapArray[posicionHijo] = aux;
+    while (1){
+        int posicionHijo = (2 * posicion) + 1;
+        int posicionHijoDos = (2 * posicion) + 2;
+      
+        if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijo].priority){
+            //Swap
+            aux = pq->heapArray[posicion];
+            pq->heapArray[posicion] = pq->heapArray[posicionHijo];
+            pq->heapArray[posicionHijo] = aux;
+            posicion = posicionHijo;
+        }
+        else{
+            if (pq->heapArray[posicion].priority < pq->heapArray[posicionHijoDos].priority){
+              //Swap
+              aux = pq->heapArray[posicion];
+              pq->heapArray[posicion] = pq->heapArray[posicionHijo];
+              pq->heapArray[posicionHijo] = aux;
+              posicion = posicionHijoDos;
+            }
+            break;
+        }
     }
 }
 
