@@ -83,6 +83,7 @@ void heap_pop(Heap* pq){
                 }
                     
             }
+            printf("POSICION : %d\n",posicion);
             break;
         }
     }
