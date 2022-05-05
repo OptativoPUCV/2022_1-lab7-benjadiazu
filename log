@@ -671,3 +671,16 @@ heap.c:78:13: error: expected ‘;’ before ‘}’ token
              ^
 Compilation failed
 3ba7c61
+Thu May  5 22:33:29 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:71:37: error: invalid operands to binary < (have ‘heapElem {aka struct nodo}’ and ‘int’)
+         if (pq->heapArray[posicion] < pq->heapArray[posicionHijo].priority || pq->heapArray[posicion] < pq->heapArray[posicionHijoDos].priority){
+             ~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+heap.c:71:103: error: invalid operands to binary < (have ‘heapElem {aka struct nodo}’ and ‘int’)
+         if (pq->heapArray[posicion] < pq->heapArray[posicionHijo].priority || pq->heapArray[posicion] < pq->heapArray[posicionHijoDos].priority){
+                                                                               ~~~~~~~~~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Compilation failed
+c9df5a7
