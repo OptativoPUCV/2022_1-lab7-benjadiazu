@@ -76,6 +76,13 @@ void heap_pop(Heap* pq){
                     pq->heapArray[posicionHijoDos] = aux;
                     posicion = posicionHijoDos;
             }
+            else{
+                    aux = pq->heapArray[posicion];
+                    pq->heapArray[posicion] = pq->heapArray[posicionHijo];
+                    pq->heapArray[posicionHijo] = aux;
+                    posicion = posicionHijo;
+            }
+                
         }
         break;
     }
