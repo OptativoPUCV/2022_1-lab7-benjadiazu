@@ -157,3 +157,9 @@ heap.c:47:9: error: ‘else’ without a previous ‘if’
          ^~~~
 Compilation failed
 607b8bc
+Thu May  5 15:30:52 UTC 2022: 
+ heap.c | 3 +--
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+ tests:  4|2
+total_score: 30/70
+a151b0b
