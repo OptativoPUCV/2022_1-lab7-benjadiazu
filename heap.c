@@ -76,7 +76,7 @@ void heap_pop(Heap* pq){
                     pq->heapArray[posicionHijoDos] = aux;
                     posicion = posicionHijoDos;
             }
-            else{
+            else if (pq->heapArray[posicionHijoDos].priority < pq->heapArray[posicionHijo].priority){
                     aux = pq->heapArray[posicion];
                     pq->heapArray[posicion] = pq->heapArray[posicionHijo];
                     pq->heapArray[posicionHijo] = aux;
