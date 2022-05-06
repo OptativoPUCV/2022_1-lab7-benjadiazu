@@ -57,10 +57,9 @@ void heap_pop(Heap* pq){
     //BORRADO
     
     int ultimaPosicion = pq->size - 1;
-    heapElem aux;
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->size--;
-
+    heapElem aux;
     //HACER SWAPS
     int posicion = 0;
     int hijoUno,hijoDos;
