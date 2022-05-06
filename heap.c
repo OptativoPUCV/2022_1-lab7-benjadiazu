@@ -80,14 +80,12 @@ void heap_pop(Heap* pq){
                 aux = pq->heapArray[posicion];
                 pq->heapArray[posicion] = pq->heapArray[hijoUno];
                 pq->heapArray[hijoUno] = aux;
-                posicion = hijoUno;
           }
           else{
               //SWAP CON HIJO DOS
                 aux = pq->heapArray[posicion];
                 pq->heapArray[posicion] = pq->heapArray[hijoDos];
                 pq->heapArray[hijoDos] = aux;
-                posicion = hijoDos;
               
           }
         
