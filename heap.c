@@ -54,10 +54,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 
 void heap_pop(Heap* pq){
-    //BORRADO
-    
     int ultimaPosicion = pq->size - 1;
-
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->size--;
     
@@ -81,10 +78,8 @@ void heap_pop(Heap* pq){
                   //SWAP CON HIJO DOS
                     aux = pq->heapArray[posicion];
                     pq->heapArray[posicion] = pq->heapArray[hijoDos];
-                    pq->heapArray[hijoDos] = aux;
-                  
+                    pq->heapArray[hijoDos] = aux; 
               }
-            
           }
           else{break;}
       }
