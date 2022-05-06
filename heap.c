@@ -55,7 +55,7 @@ void heap_push(Heap* pq, void* data, int priority){
 
 void heap_pop(Heap* pq){
     //BORRADO
-    
+    /*
     int ultimaPosicion = pq->size - 1;
     
     heapElem aux = pq->heapArray[0];
@@ -91,6 +91,7 @@ void heap_pop(Heap* pq){
       }
       else{break;}
   }
+  */
 }
 Heap* createHeap(){
     Heap *nuevoHeap;
