@@ -62,7 +62,7 @@ void heap_pop(Heap* pq){
     //HACER SWAPS
     int posicion = 0;
     int hijoUno,hijoDos;
-    if (pq->size != 1){
+
           while (1){
             hijoUno = 2 * posicion + 1;
             hijoDos = 2 * posicion + 2;
@@ -83,7 +83,7 @@ void heap_pop(Heap* pq){
           }
           else{break;}
       }
-  }
+  
 }
 Heap* createHeap(){
     Heap *nuevoHeap;
