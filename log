@@ -877,3 +877,26 @@ heap.c:90:10: error: break statement not within loop or switch
 cc1: all warnings being treated as errors
 Compilation failed
 51d6c06
+Fri May  6 00:25:34 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+test.c: In function ‘heap_pop’:
+test.c:276:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:292:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:12:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+ char msg[300];
+      ^~~
+At top level:
+test.c:276:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+7ec8881

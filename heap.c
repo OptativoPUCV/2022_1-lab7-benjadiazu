@@ -69,7 +69,7 @@ void heap_pop(Heap* pq){
     while (1){
       hijoUno = 2 * posicion + 1;
       hijoDos = 2 * posicion + 2;
-      if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority )
+      if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority ){
         //asdsd
         if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority){
               //SWAP CON HIJO UNO
