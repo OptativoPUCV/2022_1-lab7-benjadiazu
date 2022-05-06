@@ -66,34 +66,32 @@ void heap_pop(Heap* pq){
     //HACER SWAPS
     int posicion = 0;
     int hijoUno,hijoDos;
-    /*
-    while (1){
-      hijoUno = 2 * posicion + 1;
-      hijoDos = 2 * posicion + 2;
-      if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority ){
-        //asdsd
-        if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority){
-              //SWAP CON HIJO UNO
-              aux = pq->heapArray[posicion];
-              pq->heapArray[posicion] = pq->heapArray[hijoUno];
-              pq->heapArray[hijoUno] = aux;
-              posicion = hijoUno;
-        }
-        else{
-            /*SWAP CON HIJO DOS
-              aux = pq->heapArray[posicion];
-              pq->heapArray[posicion] = pq->heapArray[hijoDos];
-              pq->heapArray[hijoDos] = aux;
-              posicion = hijoDos;
-            */
-        }
-      
-    }
-    else{break;}
-
   
+      while (1){
+        hijoUno = 2 * posicion + 1;
+        hijoDos = 2 * posicion + 2;
+        if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority ){
+          //asdsd
+          if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority){
+                //SWAP CON HIJO UNO
+                aux = pq->heapArray[posicion];
+                pq->heapArray[posicion] = pq->heapArray[hijoUno];
+                pq->heapArray[hijoUno] = aux;
+                posicion = hijoUno;
+          }
+          else{
+              /*SWAP CON HIJO DOS
+                aux = pq->heapArray[posicion];
+                pq->heapArray[posicion] = pq->heapArray[hijoDos];
+                pq->heapArray[hijoDos] = aux;
+                posicion = hijoDos;
+              
+          }
+        
+      }
+      else{break;}
+  }
 }
-
 Heap* createHeap(){
     Heap *nuevoHeap;
     nuevoHeap = (Heap*)malloc(sizeof(Heap));

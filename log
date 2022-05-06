@@ -1024,3 +1024,35 @@ heap.c:95:1: error: expected identifier or ‘(’ before ‘}’ token
 cc1: all warnings being treated as errors
 Compilation failed
 b629ea4
+Fri May  6 00:39:20 UTC 2022: 
+ heap.c | 8 +++-----
+ 1 file changed, 3 insertions(+), 5 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:83:15: error: unterminated comment
+               /*SWAP CON HIJO DOS
+               ^
+test.c:276:5: error: ‘main’ is normally a non-static function [-Werror=main]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:292:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:12:6: error: unused variable ‘msg’ [-Werror=unused-variable]
+ char msg[300];
+      ^~~
+test.c:292:1: error: expected declaration or statement at end of input
+ }
+ ^
+test.c:292:1: error: expected declaration or statement at end of input
+test.c:292:1: error: expected declaration or statement at end of input
+At top level:
+test.c:276:5: error: ‘main’ defined but not used [-Werror=unused-function]
+ int main( int argc, char *argv[] ) {
+     ^~~~
+test.c:6:8: error: ‘_strdup’ defined but not used [-Werror=unused-function]
+ char * _strdup(const char * str) {
+        ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+36821cd
