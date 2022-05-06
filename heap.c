@@ -66,7 +66,7 @@ void heap_pop(Heap* pq){
     //HACER SWAPS
     int posicion = 0;
     int hijoUno,hijoDos;
-  
+    /*
     while (1){
       hijoUno = 2 * posicion + 1;
       hijoDos = 2 * posicion + 2;
