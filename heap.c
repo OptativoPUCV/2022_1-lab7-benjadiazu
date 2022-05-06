@@ -59,6 +59,7 @@ void heap_pop(Heap* pq){
     int ultimaPosicion = pq->size - 1;
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->size--;
+    printf("SIZE: %d\n",pq->size);
     heapElem aux;
     //HACER SWAPS
     int posicion = 0;
