@@ -859,3 +859,21 @@ heap.c:67:9: error: unused variable ‘hijoUno’ [-Werror=unused-variable]
 cc1: all warnings being treated as errors
 Compilation failed
 d85cba6
+Fri May  6 00:25:12 UTC 2022: 
+ heap.c | 26 ++++++++++++++++++++++++--
+ 1 file changed, 24 insertions(+), 2 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:72:10: error: suggest explicit braces to avoid ambiguous ‘else’ [-Werror=dangling-else]
+       if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority )
+          ^
+In file included from test.c:4:0:
+heap.c:90:5: error: ‘else’ without a previous ‘if’
+     else{break;}
+     ^~~~
+heap.c:90:10: error: break statement not within loop or switch
+     else{break;}
+          ^~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+51d6c06
