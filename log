@@ -1127,3 +1127,9 @@ heap.c:72:116: error: comparison between pointer and integer [-Werror]
 cc1: all warnings being treated as errors
 Compilation failed
 8d2804e
+Fri May  6 00:44:24 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  7|1
+total_score: 60/70
+9a4818b

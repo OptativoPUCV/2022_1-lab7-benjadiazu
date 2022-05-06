@@ -69,7 +69,7 @@ void heap_pop(Heap* pq){
         hijoDos = 2 * posicion + 2;
         if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority ){
           //asdsd
-          if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority && pq->heapArray[hijoUno].priority != NULL ){
+          if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority && pq->heapArray[hijoUno].data != NULL ){
                 //SWAP CON HIJO UNO
                 aux = pq->heapArray[posicion];
                 pq->heapArray[posicion] = pq->heapArray[hijoUno];
