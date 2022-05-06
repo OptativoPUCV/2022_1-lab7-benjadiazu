@@ -68,7 +68,6 @@ void heap_pop(Heap* pq){
     int hijoUno,hijoDos;
   
     while (1){
-      printf("HOLAA\n");
       hijoUno = 2 * posicion + 1;
       hijoDos = 2 * posicion + 2;
       if (pq->heapArray[posicion].priority < pq->heapArray[hijoUno].priority || pq->heapArray[posicion].priority < pq->heapArray[hijoDos].priority ){
@@ -81,11 +80,12 @@ void heap_pop(Heap* pq){
               posicion = hijoUno;
         }
         else{
-            //SWAP CON HIJO DOS
+            /*SWAP CON HIJO DOS
               aux = pq->heapArray[posicion];
               pq->heapArray[posicion] = pq->heapArray[hijoDos];
               pq->heapArray[hijoDos] = aux;
               posicion = hijoDos;
+            */
         }
       
     }
