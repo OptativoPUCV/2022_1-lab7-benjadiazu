@@ -57,8 +57,6 @@ void heap_pop(Heap* pq){
     //BORRADO
     
     int ultimaPosicion = pq->size - 1;
-    printf("ULTIMO : %d\n",ultimaPosicion);
-    printf("prioridad : %d\n",pq->heapArray[ultimaPosicion + 1].priority);
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->size--;
     heapElem aux;
