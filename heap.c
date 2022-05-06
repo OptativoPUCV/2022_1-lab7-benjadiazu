@@ -61,6 +61,7 @@ void heap_pop(Heap* pq){
     printf("SEGUNDO: %d\n",pq->heapArray[1].priority);
     printf("PRIMERO: %d\n",pq->heapArray[2].priority);
     printf("SEGUNDO: %d\n",pq->heapArray[3].priority);
+    printf("PRIMERO: %d\n",pq->heapArray[4].priority);
     pq->heapArray[0] = pq->heapArray[ultimaPosicion];
     pq->size--;
     
