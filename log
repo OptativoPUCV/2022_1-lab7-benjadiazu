@@ -845,3 +845,17 @@ Fri May  6 00:00:56 UTC 2022:
  tests:  7|1
 total_score: 55/70
 fc229b8
+Fri May  6 00:19:10 UTC 2022: 
+ heap.c | 17 -----------------
+ 1 file changed, 17 deletions(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:68:9: error: unused variable ‘hijoDos’ [-Werror=unused-variable]
+     int hijoDos = 2 * posicion + 2;
+         ^~~~~~~
+heap.c:67:9: error: unused variable ‘hijoUno’ [-Werror=unused-variable]
+     int hijoUno = 2 * posicion + 1;
+         ^~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+d85cba6
