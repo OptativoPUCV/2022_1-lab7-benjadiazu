@@ -1116,3 +1116,14 @@ Fri May  6 00:42:49 UTC 2022:
  tests:  7|1
 total_score: 60/70
 f6a7578
+Fri May  6 00:44:13 UTC 2022: 
+ heap.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:4:0:
+heap.c: In function ‘heap_pop’:
+heap.c:72:116: error: comparison between pointer and integer [-Werror]
+           if (pq->heapArray[hijoUno].priority > pq->heapArray[hijoDos].priority && pq->heapArray[hijoUno].priority != NULL ){
+                                                                                                                    ^~
+cc1: all warnings being treated as errors
+Compilation failed
+8d2804e
